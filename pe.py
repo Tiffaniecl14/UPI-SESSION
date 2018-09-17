@@ -23,7 +23,7 @@ for i in range(1,6,1):
     yexact=equations.sol_affine(t,y0)
     erreur[i]=max(abs((ycal-yexact)/yexact))
     #Ecriture de l erreur en fonction de h
-    print("Valeur de h : "+str(h[i])+"et son erreur associe "+str(erreur[i]))
+    print("Valeur de h : "+str(h[i])+" et son erreur associe "+str(erreur[i]))
 
 plot(h,erreur)
 xscale('log')

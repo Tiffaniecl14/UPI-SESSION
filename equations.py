@@ -35,11 +35,12 @@ def sol_affine(t,y0):
 
 def nouvelle_fonction(t,y):
     return a*y**2+b
+    
+#probleme d'ajout de nouvelle fonction
 
 def calcul_valexact(t0,y0,t):
-    C=((1/(y0-1))-(1/2)*np.exp(2*t0))/np.exp(-2*t0)
-    yex=(1/((C*exp(-2*t))+(1/2)*exp(2*t)))
+    C=((1/(y0-1))+(1/2)*np.exp(-2*t0))/np.exp(2*t0)
+    yex=1+(1/((C*exp(2*t))-(1/2)*exp(-2*t)))
     return yex
+#calcul de la solution exacte verifié
 
-
-#attention pour utiliser les fonctions on doit passer un t en array
